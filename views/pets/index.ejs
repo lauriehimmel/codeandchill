@@ -1,7 +1,7 @@
 <%- include('../partials/header')%>
 
 
-<h1>All Pets</h1>
+<h1 class="allpets">All Pets</h1>
 <table id ="all-pets">
     <thead>
       <tr>
@@ -10,6 +10,7 @@
         <th>Color</th>
         <th>Interests</th>
         <th>Number of Eyes</th>
+        <th>Picture</th>
       </tr>
     </thead>
     <tbody>
@@ -20,7 +21,8 @@
           <td><%= p.color %></td>
           <td><%= p.interests %></td>
           <td><%= p.eyeNo %></td>
-          <td><a href="/pets/<%=p._id%>">Details</a></td>
+          <td><img src="<%=p.image%>" class="index-img"></td>
+          <td><a href="/pets/<%=p._id%>" class="welcome-button">Details</a></td>
         </tr>
         <% }) %>
     </tbody>

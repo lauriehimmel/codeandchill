@@ -1,10 +1,40 @@
+* {
+  box-sizing: border-box;
+  font-family: Helvetica;
+  color: black;
+
+    /* border: 3px solid red; */
+
+}
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+  height: 100%;
+  background-color: pink;
+}
+
+.home-headers {
+  text-align: center;
+}
+
+#h1-home {
+  font-size: 10vw;
+  margin: 0px;
+}
+
+img {
+  height: 300px;
+}
+.welcome-section {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto auto auto;
+  justify-items: center;
 }
 
 a {
-  color: #00B7FF;
+  text-decoration: none;
+  color: white;
 }
 
 
@@ -26,4 +56,114 @@ a {
   50% {
     filter: hue-rotate(360deg);
   }
+}
+
+.welcome-button {
+  padding: 1em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.welcome-button:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-welcome-button 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-welcome-button {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.welcome-button:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+footer {
+  text-align: center;
+}
+
+table {
+  border-spacing: 0px;
+}
+
+table td {
+  padding: 15px;
+  text-align: center;
+}
+
+table tbody {
+  /* background-color: white; */
+}
+
+.index-img {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+}
+
+header {
+  background-color: black;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+}
+
+header > a {
+  margin: 20px;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: lightblue;
+}
+
+.allpets {
+  padding: 0 0 0 20px;
 }
