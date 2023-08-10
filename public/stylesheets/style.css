@@ -164,6 +164,36 @@ header > a {
   color: white;
 }
 
-.allpets {
+.allpets, .title {
   padding: 0 0 0 20px;
+}
+
+.link{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
+  animation: animate 5s linear infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: 1250ms;
+}
+.link:hover {
+  color: transparent;
+  transition: 400ms;
+}
+
+.show-buttons * {
+  margin: 10px;
+  display: inline;
+}
+
+.show-page {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+.new-center {
+  text-align: center;
 }
