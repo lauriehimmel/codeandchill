@@ -1,1 +1,26 @@
-HELLO I AM A NEW TOY
+<%- include('../partials/header')%>
+
+<h1>MAKE A NEW TOY</h1>
+
+<form action="/pets/toys" method="POST">
+    <label>Name:
+        <input type="string" name="name">
+      </label><br>
+    <label>Type of toy:
+        <input type="string" name="type">
+      </label><br>
+    <label>Color:
+        <input type="string" name="color">
+      </label><br>
+    <label>WHO GETS?
+        <select name="pet">
+            <%pets.forEach(pet=>{%>
+            <option value=<%=pet.name%>><%=pet.name%></option>
+<%})%>
+        </select>
+      </label><br>
+      <button>ADD NEW TOY</button>
+
+</form>
+
+<%- include('../partials/FOOTER')%>

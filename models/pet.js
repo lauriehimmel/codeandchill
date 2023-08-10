@@ -10,7 +10,7 @@ const toySchema = new Schema ({
 
 const petSchema = new Schema ({
     species: String,
-    name: String,
+    name: {type: String, required: true},
     eyeNo: {
         type: Number,
         min: 0
