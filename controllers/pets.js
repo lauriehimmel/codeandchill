@@ -4,7 +4,8 @@ const Pet = require("../models/pet")
 module.exports = {
     index,
     newPet,
-    create
+    create,
+    show
 }
 
 async function index(req,res) {
@@ -26,4 +27,11 @@ async function create(req, res){
     const newbie = {...req.body}
    await Pet.create(newbie)
     res.redirect('/pets')
+}
+
+async function show(req,res) {
+    const pet = await Pet.findById(req.params.id)
+    res.render('pets/show', {
+        pet
+    })
 }
