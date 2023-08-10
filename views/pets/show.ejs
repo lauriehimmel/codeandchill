@@ -1,4 +1,5 @@
 <%- include('../partials/header')%>
+<section class="show-page">
 <img src=<%=pet.image%>>
 <p>Name: <%=pet.name%></p>
 <p>Species: <%=pet.species%></p>
@@ -18,7 +19,7 @@
 <%})%>
 </ul>
 
-
+<section class="show-buttons">
 <form method="POST" action="/pets/<%=pet._id%>?_method=DELETE">
     <button class="welcome-button">ADOPT PET</button>
 </form>
@@ -26,6 +27,7 @@
 <form method="GET" action="/pets/edit/<%=pet._id%>?_method=GET">
     <button class="welcome-button">EDIT PET INFO</button>
 </form>
-
-
+</section>
+</section>
 <%- include('../partials/footer')%>
+
