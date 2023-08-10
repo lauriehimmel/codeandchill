@@ -1,2 +1,15 @@
-<p> Name</p>
-<p><%=pet.name%></p>
+<%- include('../partials/header')%>
+<img src=<%=pet.image%>>
+<p>Name: <%=pet.name%></p>
+<p>Species: <%=pet.species%></p>
+<p>Color: <%=pet.color%></p>
+
+<p>Interests:</p>
+<ul>
+<%pet.interests.forEach(i=>{%>
+<li><%=i%></li>
+<%})%>
+</ul>
+<p>Eyes: <%=pet.eyeNo%></p>
+
+<%- include('../partials/footer')%>

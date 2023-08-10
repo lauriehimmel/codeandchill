@@ -23,7 +23,8 @@ function newPet(req,res) {
 
 
 async function create(req, res){
-    console.log('ba;;s')
+    req.body.interests = req.body.interests.split(/ *, */)
+    console.log(req.body.interests)
     const newbie = {...req.body}
    await Pet.create(newbie)
     res.redirect('/pets')
