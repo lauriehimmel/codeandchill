@@ -18,6 +18,6 @@ function newPet(req,res) {
 
 
 async function create(req, res){
-
+console.log('test')
 
 }
