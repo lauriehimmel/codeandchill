@@ -25,6 +25,9 @@ function newPet(req,res) {
     })
 }
 
+function newToy(req, res){
+    res.render('toys')
+}
 
 async function create(req, res){
     req.body.interests = req.body.interests.split(/ *, */)
@@ -60,6 +63,3 @@ async function update(req,res) {
     res.redirect(`/pets/${req.params.id}`)
 }
 
-function newToy(req, res){
-res.render('toys/new', {})
-}

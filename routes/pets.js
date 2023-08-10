@@ -10,9 +10,6 @@ router.post('/', petCtrl.create)
 router.get('/:id', petCtrl.show)
 router.delete('/:id', petCtrl.delete)
 router.get('/edit/:id', petCtrl.editPet)
-
-router.get('/toys', petCtrl.newToy)
-
 router.put('/:id', petCtrl.update)
 
 module.exports = router;
