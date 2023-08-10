@@ -67,6 +67,10 @@ res.render('toys/new', {pets})
 }
 
 
-function addToy(req, res){
-res.send(req.body)
+async function addToy(req, res){
+const pet = await Pet.findOne({name: req.body.pet})
+const newToy = {...req.body}
+pet.toys.push(newToy)
+await pet.save()
+res.redirect(`/pets/${pet._id}`)
 }
