@@ -11,9 +11,18 @@
       <input type="string" name="species" value="<%=pet.species%>">
     </label><br>
 
-    <label>Color:
-      <input type="string" name="color" value="<%=pet.color%>">
-    </label><br>
+    <label>Color
+        <select name="color">
+          <option value="<%=pet.color%>"><%=pet.color%></option>
+          <option value="Brown">Brown</option>
+          <option value="Black">Black</option>
+          <option value="Grey">Grey</option>
+          <option value="Spotted">Spotted</option>
+          <option value="White">White</option>
+          <option value="Brindle">Brindle</option>
+          <option value="Multi">Multi</option>
+        </select>
+      </label><br>
 
     <label>Interests:
       <input type="string" name="interests" placeholder="Separated by comma" value="<%=pet.interests%>">
