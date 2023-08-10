@@ -1,14 +1,33 @@
 <%- include('../partials/header')%>
-<img src=<%=pet.image%>>
-<p>Name: <%=pet.name%></p>
-<p>Species: <%=pet.species%></p>
-<p>Color: <%=pet.color%></p>
 
-<p>Interests:</p>
-<ul>
-<%pet.interests.forEach(i=>{%>
-<li><%=i%></li>
-<%})%>
-</ul>
-<p>Eyes: <%=pet.eyeNo%></p>
+
+
+<form action="/pets/" method="POST">
+   <label>Name:
+      <input type="string" name="name" value="<%=pet.name%>">
+    </label><br>
+
+  <label>Species:
+      <input type="string" name="species" value="<%=pet.species%>">
+    </label><br>
+
+    <label>Color:
+      <input type="string" name="color" value="<%=pet.color%>">
+    </label><br>
+
+    <label>Interests:
+      <input type="string" name="interests" placeholder="Separated by comma" value="<%=pet.interests%>">
+    </label><br>
+
+    <label># of Eyes:
+      <input type="number" name="eyeNo" value:="<%=pet.eyeNo%>">
+    </label><br>
+
+    <label>Image URL:
+      <input type="String" name="image" value="<%=pet.image%>">
+    </label><br>
+
+
+    <button type="submit">Add Pet</button>
+</form>
 <%- include('../partials/footer')%>

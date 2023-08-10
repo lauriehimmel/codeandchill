@@ -7,7 +7,8 @@ module.exports = {
     create,
     show,
     delete: deletePet,
-    editPet
+    editPet,
+    update
 }
 
 async function index(req,res) {
@@ -49,4 +50,8 @@ async function editPet(req,res) {
     res.render('pets/edit', {
         pet
     })
+}
+
+async function update(req,res) {
+    req.body.interests = req.body.interests.split(/ *, */)
 }
