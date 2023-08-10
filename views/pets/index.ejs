@@ -1,1 +1,24 @@
-HI IM INDEX
+<h1>All Pets</h1>
+<table id ="all-pets">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Species</th>
+        <th>Color</th>
+        <th>Interests</th>
+        <th>Number of Eyes</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% pets.forEach(p=>{ %>
+          <tr>
+          <td><%= p.name %></td>
+          <td><%= p.species %></td>
+          <td><%= p.color %></td>
+          <td><%= p.interests %></td>
+          <td><%= p.eyeNo %></td>
+          <td><a>Details</a></td>
+        </tr>
+        <% }) %>
+    </tbody>
+  </table>
