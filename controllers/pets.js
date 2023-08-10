@@ -54,7 +54,7 @@ async function editPet(req,res) {
 async function update(req,res) {
     req.body.interests = req.body.interests.split(/ *, */)
     const updatedPet = {...req.body}
-    const newPet = await Pet.findOneAndUpdate({_id: req.params.id}, {updatedPet})
+    const newPet = await Pet.findOneAndUpdate({_id: req.params.id}, updatedPet)
     await newPet.save()
     res.redirect(`/pets/${req.params.id}`)
 }
