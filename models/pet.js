@@ -15,7 +15,7 @@ const petSchema = new Schema ({
         type: Number,
         min: 0
     },
-    color: String,
+    color: { type: String, enum: ["Brown", "Black", "Grey", "Spotted", "White", "Brindle", "Multi"] },
     interests: [String],
     // ICE BOX: owner:
     image: String,
