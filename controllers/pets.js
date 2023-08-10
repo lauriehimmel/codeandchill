@@ -27,9 +27,8 @@ function newPet(req,res) {
 
 async function create(req, res){
     req.body.interests = req.body.interests.split(/ *, */)
-    console.log(req.body.interests)
     const newbie = {...req.body}
-   await Pet.create(newbie)
+    await Pet.create(newbie)
     res.redirect('/pets')
 }
 
@@ -54,4 +53,8 @@ async function editPet(req,res) {
 
 async function update(req,res) {
     req.body.interests = req.body.interests.split(/ *, */)
+    const updatedPet = {...req.body}
+    const newPet = await Pet.findOneAndUpdate({_id: req.params.id}, {updatedPet})
+    await newPet.save()
+    res.redirect(`/pets/${req.params.id}`)
 }

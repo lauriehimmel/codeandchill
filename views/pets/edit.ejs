@@ -2,7 +2,7 @@
 
 
 
-<form action="/pets/" method="POST">
+<form action="/pets/<%=pet._id%>?_method=PUT" method="POST">
    <label>Name:
       <input type="string" name="name" value="<%=pet.name%>">
     </label><br>
@@ -28,6 +28,6 @@
     </label><br>
 
 
-    <button type="submit">Add Pet</button>
+    <button type="submit">Update Pet Info</button>
 </form>
 <%- include('../partials/footer')%>
