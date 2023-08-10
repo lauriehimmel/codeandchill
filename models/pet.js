@@ -11,6 +11,7 @@ const petSchema = new Schema ({
     color: String,
     interests: [String],
     // ICE BOX: owner:
+    image: String
 })
 
 module.exports = mongoose.model('Pet', petSchema)
