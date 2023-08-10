@@ -2,7 +2,8 @@
 
 module.exports = {
     index,
-    newPet
+    newPet,
+    create
 }
 
 function index(req,res) {
@@ -13,4 +14,10 @@ function newPet(req,res) {
     res.render('pets/new', {
         title: 'Pets!!!'
     })
+}
+
+
+async function create(req, res){
+console.log('test')
+
 }
