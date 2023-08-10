@@ -6,3 +6,24 @@ body {
 a {
   color: #00B7FF;
 }
+
+
+
+.here {
+  background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
+  animation: animate 5s linear infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-decoration: none;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(360deg);
+  }
+}
