@@ -1,6 +1,12 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
+const toySchema = new Schema ({
+    name: String,
+    type: String,
+    color: String,
+})
+
 const petSchema = new Schema ({
     species: String,
     name: String,
@@ -11,7 +17,8 @@ const petSchema = new Schema ({
     color: String,
     interests: [String],
     // ICE BOX: owner:
-    image: String
+    image: String,
+    toys: [toySchema],
 })
 
 module.exports = mongoose.model('Pet', petSchema)
