@@ -9,7 +9,8 @@ module.exports = {
     delete: deletePet,
     editPet,
     update,
-    newToy
+    newToy,
+    addToy
 }
 
 async function index(req,res) {
@@ -60,6 +61,12 @@ async function update(req,res) {
     res.redirect(`/pets/${req.params.id}`)
 }
 
-function newToy(req, res){
-res.render('toys/new', {})
+async function newToy(req, res){
+pets = await Pet.find({})
+res.render('toys/new', {pets})
+}
+
+
+function addToy(req, res){
+res.send(req.body)
 }
