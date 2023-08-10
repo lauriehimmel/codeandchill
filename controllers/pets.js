@@ -26,6 +26,9 @@ function newPet(req,res) {
     })
 }
 
+function newToy(req, res){
+    res.render('toys')
+}
 
 async function create(req, res){
     req.body.interests = req.body.interests.split(/ *, */)

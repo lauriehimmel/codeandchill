@@ -11,14 +11,20 @@
 <%})%>
 </ul>
 <p>Eyes: <%=pet.eyeNo%></p>
+<p>Toys:</p>
+<ul>
+<%pet.toys.forEach(i=>{%>
+<li><%=i.name%></li>
+<%})%>
+</ul>
 
 
 <form method="POST" action="/pets/<%=pet._id%>?_method=DELETE">
-    <button>KILL PET</button>
+    <button class="welcome-button">ADOPT PET</button>
 </form>
 
 <form method="GET" action="/pets/edit/<%=pet._id%>?_method=GET">
-    <button>EDIT PET INFO</button>
+    <button class="welcome-button">EDIT PET INFO</button>
 </form>
 
 
