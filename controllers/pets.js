@@ -6,7 +6,8 @@ module.exports = {
     newPet,
     create,
     show,
-    delete: deletePet
+    delete: deletePet,
+    editPet
 }
 
 async function index(req,res) {
@@ -41,4 +42,11 @@ async function show(req,res) {
 async function deletePet(req,res){
     await Pet.deleteOne({_id: req.params.id})
     res.redirect('/pets')
+}
+
+async function editPet(req,res) {
+    const pet = await Pet.findById(req.params.id)
+    res.render('pets/edit', {
+        pet
+    })
 }
