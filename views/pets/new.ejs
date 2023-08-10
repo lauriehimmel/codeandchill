@@ -1,8 +1,26 @@
 <%=title%>
 
-<form action="/pets/new" method="POST">
-    <label>Pet Type:
-        <input type="string" name="petType">
-      </label><br>
+<form action="/pets/" method="POST">
+   <label>Name:
+      <input type="string" name="name">
+    </label><br>
+
+  <label>Species:
+      <input type="string" name="species">
+    </label><br>
+
+    <label>Color:
+      <input type="string" name="color">
+    </label><br>
+
+    <label>Interests:
+      <input type="string" name="interests" placeholder="Separated by comma">
+    </label><br>
+
+    <label># of Eyes:
+      <input type="number" name="eyeNo">
+    </label><br>
+
+
     <button type="submit">Add Pet</button>
 </form>

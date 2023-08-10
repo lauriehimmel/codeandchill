@@ -6,6 +6,6 @@ var petCtrl = require('../controllers/pets')
 
 router.get('/', petCtrl.index)
 router.get('/new', petCtrl.newPet)
-router.post('/new', petCtrl.create)
+router.post('/', petCtrl.create)
 
 module.exports = router;
