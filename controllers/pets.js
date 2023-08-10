@@ -5,7 +5,8 @@ module.exports = {
     index,
     newPet,
     create,
-    show
+    show,
+    delete: deletePet
 }
 
 async function index(req,res) {
@@ -35,4 +36,9 @@ async function show(req,res) {
     res.render('pets/show', {
         pet
     })
+}
+
+async function deletePet(req,res){
+    await Pet.deleteOne({_id: req.params.id})
+    res.redirect('/pets')
 }

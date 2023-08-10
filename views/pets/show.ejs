@@ -13,7 +13,7 @@
 <p>Eyes: <%=pet.eyeNo%></p>
 
 
-<form action="/pets/<%=pet._id%>">
+<form method="POST" action="/pets/<%=pet._id%>?_method=DELETE">
     <button>KILL PET</button>
 </form>
 
