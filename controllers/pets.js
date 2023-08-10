@@ -8,7 +8,8 @@ module.exports = {
     show,
     delete: deletePet,
     editPet,
-    update
+    update,
+    newToy
 }
 
 async function index(req,res) {
@@ -57,4 +58,8 @@ async function update(req,res) {
     const newPet = await Pet.findOneAndUpdate({_id: req.params.id}, updatedPet)
     await newPet.save()
     res.redirect(`/pets/${req.params.id}`)
+}
+
+function newToy(req, res){
+res.render('toys/new', {})
 }
