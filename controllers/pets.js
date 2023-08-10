@@ -7,9 +7,12 @@ module.exports = {
     create
 }
 
-function index(req,res) {
-    res.send("here are the pets!")
+async function index(req,res) {
+    Pet.find({})
+    .then(results=>res.render('pets/index', {pets: results}))
+    .catch(err=>res.send(err))
 }
+
 
 function newPet(req,res) {
     res.render('pets/new', {
